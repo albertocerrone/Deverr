@@ -3,7 +3,7 @@ by [Alberto Cerrone](www.linkedin.com/in/alberto-cerrone), [Sandra Spighel](http
 ![img](https://img.shields.io/badge/version-v%201.0.0-blue)
 
 
-👉 [<b>TRY ME</b>](#website link) 👈
+👉 [<b>TRY ME</b>]() 👈
 
 <h2>Project Brief</h2>
 
@@ -17,22 +17,22 @@ by [Alberto Cerrone](www.linkedin.com/in/alberto-cerrone), [Sandra Spighel](http
 * Javascript
 ### Frameworks & Libraries
 * [React](https://reactjs.org/)
-* [React-Router-Dom] (https://reactrouter.com/ )
-* [React-Icons] (https://react-icons.github.io/react-icons/)
-* [React-Slick] (https://react-slick.neostack.com/)
-* [Styled-components] (https://styled-components.com)
+* [React-Router-Dom](https://reactrouter.com/ )
+* [React-Icons](https://react-icons.github.io/react-icons/)
+* [React-Slick](https://react-slick.neostack.com/)
+* [Styled-components](https://styled-components.com)
 * [Node](https://nodejs.org/en/)
 
 ### Dependencies & Components 
 * [Axios](https://github.com/axios/axios)
-* [Bcrypt] (https://pypi.org/project/bcrypt/) 
+* [Bcrypt](https://pypi.org/project/bcrypt/) 
 * [Cloudinary](https://cloudinary.com/documentation)
 * [Express ](https://www.react.express/ )
-* [Faker.js] (https://www.npmjs.com/package/faker ) 
-* [JsonWebToken] (https://www.npmjs.com/package/jsonwebtoken )
+* [Faker.js](https://www.npmjs.com/package/faker ) 
+* [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken )
 * [Nodemon ](https://nodemon.io/ )
 * [Mongoose ](https://mongoosejs.com/) 
-* [Mongoose-unique-validator] (https://mongoosejs.com/docs/validation.html) 
+* [Mongoose-unique-validator](https://mongoosejs.com/docs/validation.html) 
 * [MongoDB](https://www.mongodb.com/)
 ---
 ## Contributors

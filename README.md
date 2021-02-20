@@ -3,7 +3,7 @@ by [Alberto Cerrone](www.linkedin.com/in/alberto-cerrone), [Sandra Spighel](http
 ![img](https://img.shields.io/badge/version-v%201.0.0-blue)
 
 
-👉 [<b>TRY ME</b>](#website link) 👈
+👉 [<b>TRY ME</b>](https://deverr.herokuapp.com/) 👈
 
 ## Small description
 Deverr allows Developers to connect with Auctioneers that advertise contract jobs.
@@ -29,10 +29,10 @@ More in depth informaation is available via the extended ReadMe documentation: h
 * Javascript
 ### Frameworks & Libraries
 * [React](https://reactjs.org/)
-* [React-Router-Dom] (https://reactrouter.com/ )
-* [React-Icons] (https://react-icons.github.io/react-icons/)
-* [React-Slick] (https://react-slick.neostack.com/)
-* [Styled-components] (https://styled-components.com)
+* [React-Router-Dom](https://reactrouter.com/ )
+* [React-Icons](https://react-icons.github.io/react-icons/)
+* [React-Slick](https://react-slick.neostack.com/)
+* [Styled-components](https://styled-components.com)
 * [Node](https://nodejs.org/en/)
 
 ### Dependencies & Components 
@@ -41,7 +41,7 @@ More in depth informaation is available via the extended ReadMe documentation: h
 * [Cloudinary](https://cloudinary.com/documentation)
 * [Express ](https://www.react.express/ )
 * [Faker.js](https://www.npmjs.com/package/faker ) 
-* [JsonWebToken] (https://www.npmjs.com/package/jsonwebtoken )
+* [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken )
 * [Nodemon ](https://nodemon.io/ )
 * [Mongoose ](https://mongoosejs.com/) 
 * [Mongoose-unique-validator](https://mongoosejs.com/docs/validation.html) 

@@ -28,13 +28,8 @@ by [Alberto Cerrone](www.linkedin.com/in/alberto-cerrone), [Sandra Spighel](http
 * [Bcrypt] (https://pypi.org/project/bcrypt/) 
 * [Cloudinary](https://cloudinary.com/documentation)
 * [Express ](https://www.react.express/ )
-<<<<<<< HEAD
 * [Faker.js](https://www.npmjs.com/package/faker ) 
 * [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken )
-=======
-* [Faker.js] (https://www.npmjs.com/package/faker ) 
-* [JsonWebToken] (https://www.npmjs.com/package/jsonwebtoken )
->>>>>>> parent of 697354c (working on ReadMe)
 * [Nodemon ](https://nodemon.io/ )
 * [Mongoose ](https://mongoosejs.com/) 
 * [Mongoose-unique-validator] (https://mongoosejs.com/docs/validation.html) 

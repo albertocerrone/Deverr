@@ -1,229 +1,413 @@
-# <h1>SEI-Project Three: Deverr</h1>
-by [Alberto Cerrone](www.linkedin.com/in/alberto-cerrone), [Sandra Spighel](https://www.linkedin.com/in/sandraspighel/) & [Tim Frame](https://www.linkedin.com/in/tim-frame-187241100/) AKA SpicyKiwiPizza
+# DEVERR 👨🏼‍💻
+by [Alberto Cerrone](www.linkedin.com/in/alberto-cerrone), [Sandra Spighel](https://www.linkedin.com/in/sandraspighel/) && [Tim Frame](https://www.linkedin.com/in/tim-frame-187241100/) AKA SpicyKiwiPizza 🌶🥝🍕<br>
+
 ![img](https://img.shields.io/badge/version-v%201.0.0-blue)
+![img](https://img.shields.io/badge/-WORK%20IN%20PROGRESS...-important)<br>
+Timeline: 10 days
+
+👉 [<b>Try me</b>](https://deverr.herokuapp.com/) 👈
+
+---
+
+## Overview
+![img](assets/readme/logo.png)<br>
+
+Deverr allows Developers to connect with companies or people advertsing jobs.
+Inspired by the Fiverr website, the platform is based on a bidding system where Auctioneers post Jobs and interested developers(Bidders) can ‘bid’ to win the contract.
+
+This project is been developed during General Assembly course, with the goal of design a full-stack MERN app using over 10 day time. I'm actively working on this project.
+
+---
+
+### Table of Contents
+
+- [Get Started](#get-started)
+  - [Required](#required)
+  - [Installation Steps](#installation-steps)
+  - [How To Use It](#how-to-use-it)
+- [How We Made It](#how-we-made-it)
+  - [Technologies Used](#technologies-used)
+  - [Approach Taken](#approach-taken)
+  - [Bugs, Blockers & Wins](#bugs,-blockers-&-wins)
+    - [Bugs](#bugs)
+    - [Challenges & Wins](#challenges-&-wins)
+  - [Future Features & Key Learning](#future-features-&-key-learning)
+    - [Future Features](#future-features)
+    - [Key Learning](#key-learning)
+- [Contributors](#contributors)
+  - [Contributing to this project](#contributing-to-this-project) 
+- [License & Copyright](#license-&-copyright)
+- [Author Info](#author-info)
+
+---
+
+## Get Started
+### Required
+
+If you would like to participate in this project, you can download this JSON with all the routes to test the responses from the API. <br>
+This JSON has to be imported to [Insomnia](https://insomnia.rest/)👇<br>
+
+<a download href="https://raw.githubusercontent.com/albertocerrone/Deverr/main/assets/readme/insomnia-Deverr.json">![img](https://img.shields.io/badge/-DOWNLOAD%20JSON...-blue)</a>
+<br>
 
 
-👉 [<b>TRY ME</b>](https://deverr.herokuapp.com/) 👈
+### Installation Steps
+Clone or download the repo then do the following in Terminal:
 
-<h2>Project Brief</h2>
+- If your mongoDB is offline, turn it on:  `mongod --dbpath ~/data/db`
+- Install back-end dependencies:  `yarn`
+- Change into front-end directory: `cd client`
+- Install front-end dependencies: `yarn`
+- Change into back-end directory: `..`
+- Start back-end and front-end together: `yarn dev-fullstack`
+OR:
+  - Start back-end server: `yarn dev`
+  - Start front-end server: `cd client && yarn start`
+- if you need to seed your database: `yarn seed`
+### How to Use It
 
-<p>This was the third project I completed in General Assembly's Immersive Software Engineering program. Project three was a group project. In project three we were tasked with building a full-stack MERN application over a 10 day time period.</p>
 
-<h2>Technologies used</h2>
+![img](assets/readme/home-page.png)<br>
+The landing page of Deverr allows the user to choose four options from the navbar:
+- Job, to check all the jobs currently on the website
+- People, to review all the current users of the site
+- Register, if they don't have an account
+- Login, to access the website
 
-### Languages 
-* HTML
-* CSS
-* Javascript
-### Frameworks & Libraries
-* [React](https://reactjs.org/)
-* [React-Router-Dom](https://reactrouter.com/ )
-* [React-Icons](https://react-icons.github.io/react-icons/)
-* [React-Slick](https://react-slick.neostack.com/)
-* [Styled-components](https://styled-components.com)
-* [Node](https://nodejs.org/en/)
+#### Register
+![img](assets/readme/register-page-1.png)<br>
+If the user decide to create an account they are taken to the register page. The first step is to select if they are a, ‘Bidder’ or an ‘Auctioneer. 
+- ![img](assets/readme/register-page-2.png)<br>
+If a user chooses the ‘Bidder’, option they are required to provide name, email, password, password confirmation, bio, city, skills(can choose multiple), select there availability and choose a profile image.
+- ![img](assets/readme/register-page-3.png)<br>
+If a user chooses the ‘Auctioneer’ option they are required to provide a name, username, password, password confirmation, bio, city, confirm they are an auctioneer and a profile photo.
 
-### Dependencies & Components 
-* [Axios](https://github.com/axios/axios)
-* [Bcrypt] (https://pypi.org/project/bcrypt/) 
-* [Cloudinary](https://cloudinary.com/documentation)
-* [Express ](https://www.react.express/ )
-* [Faker.js](https://www.npmjs.com/package/faker ) 
-* [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken )
-* [Nodemon ](https://nodemon.io/ )
-* [Mongoose ](https://mongoosejs.com/) 
-* [Mongoose-unique-validator] (https://mongoosejs.com/docs/validation.html) 
-* [MongoDB](https://www.mongodb.com/)
+If the user registration is successful they are conducted to the login page, otherwise, they will receive an error message underneath the incorrect form field
+
+#### Login
+![img](assets/readme/login-page.png)<br>
+On the login page, the user needs to provide the email and password they provided during the registration process. If either field is incorrect on submission the user will receive an error message.
+
+##### My Profile
+![img](assets/readme/auctioneer-profile.png)<br>
+
+Once logged in the user is directed to the profile page. Here they can see all the details they provided during registration. Also, they have the option to edit or delete their profile.<br>
+If the user is an auctioneer, they have one more button that allows them to create a new job.
+
+![img](assets/readme/new-job.png)<br>
+If the auctioneer chooses to create a new job they are moved to a new page. Here they can provide all the details needed.<br>
+Once the job is submitted the user is taken to the live view of the job.
+
+#### Jobs
+![img](assets/readme/jobs.png)<br>
+
+If the user navigates to the "Job" page, they will have a full view of all the live jobs and the opportunity to filter them by category using the carousel at the top of the page.<br>
+When they click on a job card they will move to the page of that job.
+
+##### Job Page
+![img](assets/readme/bidder-job-view.png "bidder view")<br>
+Here a "Bidder" can comment on a job to ask for more details or place a bid using the "Place Bid" field where the bidder needs to provide a short message and how much they would like to bid. <br>
+Once a "Bidder" has placed a bid they will get an alert to say their bid has been placed. The bid itself is only visible to the "Auctioneer" who created the job.
+![img](assets/readme/accept-bid.png "auctioneer view")<br>
+On the other side, the "Auctioneer" has a slightly different view of this page.
+He can delete or edit the job, and once the job starts to receive bids, the "Auctioneer" can see all the bids and by clicking "Accept This Bids" will choose the winning bid.
+![img](assets/readme/bidder-message.png)<br>
+Once the bid has been accepted, all the "Accept This Bids" button is removed from all the remaining bids and a message is sent to the bidder profile with the winning bid.
+
+[Back To The Top](#deverr-)
+
+---
+## How We Made It
+### Technologies Used
+
+#### Languages Used
+- [Javascript](https://www.javascript.com/)
+- [Node.js](https://nodejs.org/)
+#### Frameworks
+- [React with React Hooks](https://reactjs.org/)
+- [SASS](https://sass-lang.com/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/3)
+#### Dependencies
+##### Backend
+- [BCrypt](https://pypi.org/project/bcrypt/)
+- [Concurrently](https://github.com/kimmobrunfeldt/concurrently)
+- [Faker.js](https://github.com/Marak/Faker.js)
+- [Node-JsonWebToken](https://github.com/auth0/node-jsonwebtoken)
+- [Nodemon](https://github.com/remy/nodemon)
+- [Mongoose](https://mongoosejs.com/)
+- [Mongoose-unique-validator](https://mongoosejs.com/docs/validation.html)
+
+##### Frontend
+- [Axios](https://github.com/axios/axios)
+- [React-Icons](https://react-icons.github.io/react-icons/)
+- [React-Slick](https://react-slick.neostack.com/)
+- [React-router-dom](https://reactrouter.com/web/guides/quick-start)
+- [Styled-Components](https://styled-components.com/)
+- [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware)
+
+##### API
+- [Cloudinary](https://cloudinary.com/documentation)
+
+### Approach Taken
+For this project, we wanted to create something that could give us a good challenge, not only to cement our knowledge learned during lessons but to let us face problems that we never handled before.
+
+We agreed since the beginning to split ownership of different areas: I was responsible for styling, Sandra was responsible for the back-end and Tim was responsible for the front-end.<br>
+Even if the roles were split, we spent all our coding time in contact through Zoom because everyone had to participate in helping others. Thanks to this, everyone had the opportunity to get the hands dirty with every bit of the project.
+
+
+##### Planning
+The idea of Deverr was born thanks to a process that I created while managing teams in my previous industry.<br>
+Every one of us had 45 minutes to find a proposal idea:
+- Sandra proposed for a Fiverr clone;
+- Tim proposed an Airbnb for camping;
+- I proposed a mixed clone between Netflix and Plex.
+![img](assets/readme/voting.png)<br>
+
+At the end of each presentation, we had to give a vote from 1 to 10 to each project following these steps:
+- Wow Effect, does it sounds cool?
+- Easy, does it seem easy to produce?
+- Achievable, can we built it in the short time that we have?
+- Design, does the design looks nice? Is it difficult to make?
+- Functionality, can we build the back-end without any problems?
+- External API, do we need to use external APIs? Are they difficult to use?
+
+The project with the highest points was the one we were going to build.
+![img](assets/readme/Deverr-vote.png)
+This process not only allowed us to give a numeric value to our feelings, allowing us a more democratic decision, but let us find the weakest point of each project and come out with a better solution. <br>
+This is why we went for a Fiverr clone, with a bidding system (the weakest point was the WOW Effect, and we thought that this could improve that score)
+
+After we were happy about the project we throw down a small wireframe to understand better what was the flow of the website. 
+![](assets/readme/home-mockup.jpg)
+![](assets/readme/register-mock-up.jpg)
+![](assets/readme/login-mock-up.jpg)
+![](assets/readme/profile-mock-up.jpg)
+
+We decided to have 6 categories of job:
+- Android Developer
+- Apple Developer
+- Back-end Developer
+- Front-end Developer
+- Game Developer
+- UI Developer
+
+When we felt ready to start, we began to work together on the back-end:
+Tim started to take care of installing dependencies and creating job's seeds, Sandra was coding all the User and Job models and I found Faker.js that allowed us to create dummy data for our users in a much more simple way.<br>
+
+We checked that all the models and controllers worked with Insomnia and when we were happy about it, I and Tim moved to work on the client-side and each one of us continued to work on different tasks.
+
+I went for a glass morph design, trying to give a sharp and captivating look.
+I wanted to experiment more with SASS and discover more features.
+
+I tried to keep a well-organized file organization with a file `_variables.scss` that stores all the common variables shared between different components.
+```scss
+$gm-background-1: linear-gradient(130deg, rgba(242,242,249,0.8) 0%, rgba(253,254,254,0.2) 100%);
+$gm-background-2: rgba(255, 255, 255, 0.81);
+$gm-background-3: rgba( 255, 255, 255, 0.15 );
+$gm-blur: blur( 4px );
+$gm-border-radius: 15px;
+$gm-border: 1px solid rgba(255, 255, 255, 0.555);
+$gm-shadow: 4px 8px 10px 0 rgba(3, 5, 39, 0.55);
+$gm-shadow-sm: 2px 4px 7px 0 rgba(2, 5, 39, 0.57);
+//Logo
+$deverr-color: -webkit-linear-gradient(90deg, rgba(38, 3, 163, 0.637) 0%, rgba(11, 183, 206, 0.623) 100%);
+
+//Basic Font Color
+$font-basic: rgb(101, 100, 105);
+$font-blue: rgb(10, 66, 187);
+```
+
+All the buttons are managed using `@mixin`; this allowed me to easily create different buttons, with different sizes.
+
+```scss
+@mixin normalButton($color_1, $color_2, $size: 0.7rem) {
+  margin: 0 2px 5px;
+  border-radius: 15px;
+  padding: 8px 30px;
+	box-shadow: 1px 1px 3px -1px #121312c7, -1px -1px 2px -1px #ffffff77;
+  font-size: $size;
+  font-weight: 600;
+  text-transform: uppercase ;
+  color: $color_2;
+  text-shadow: none;
+  background: $color_1;
+	transition: $transition;
+	&:hover {
+    color: adjust-color($color_2, $lightness: 20%) ; 
+    box-shadow: 3px 3px 5px -1px #121312c7, -2px -2px 4px -1px #ffffff77;
+	}
+	&:active:focus {
+		border:none;
+    box-shadow: inset 2px 2px 5px -1px #1111118f, inset -3px -3px 9px -2px #ffffff54;
+    color: darken($color: $color_2, $amount: 10);
+    font-size: calc(#{$size} - 10%)
+  }
+}
+
+
+// Normal Buttons
+.btn {
+  @include normalButton($white-shaded, $standard);
+}
+.btn-xs {
+  @include normalButton($white-shaded, $standard, $xs);
+}
+.btn-sm {
+  @include normalButton($white-shaded, $standard, $sm);
+}
+.btn-lg {
+  @include normalButton($white-shaded, $standard, $lg);
+}
+.btn-xl {
+  @include normalButton($white-shaded, $standard, $xl);
+}
+// Secondary Buttons
+.btn-secondary  {
+  @include normalButton($secondary, $white);
+}
+.btn-secondary-xs {
+  @include normalButton($secondary, $white, $xs);
+}
+.btn-secondary-sm {
+  @include normalButton($secondary, $white, $sm);
+}
+.btn-secondary-lg {
+  @include normalButton($secondary, $white, $lg);
+}
+.btn-secondary-xl {
+  @include normalButton($secondary, $white, $xl);
+}
+// Green Buttons
+.btn-submit {
+  @include normalButton($submit, $white);
+} 
+.btn-submit-xs {
+  @include normalButton($submit, $white, $xs);
+} 
+.btn-submit-sm {
+  @include normalButton($submit, $white, $sm);
+} 
+.btn-submit-lg {
+  @include normalButton($submit, $white, $lg);
+} 
+.btn-submit-xl {
+  @include normalButton($submit, $white, $xl);
+} 
+// Red Buttons
+.btn-cancel {
+  @include normalButton($cancel, $white);
+}
+.btn-cancel-xs {
+  @include normalButton($cancel, $white, $xs);
+}
+.btn-cancel-sm {
+  @include normalButton($cancel, $white, $sm);
+}
+.btn-cancel-lg {
+  @include normalButton($cancel, $white, $lg);
+}
+.btn-cancel-xl {
+  @include normalButton($cancel, $white, $xl);
+}
+
+```
+
+As well I wanted to look at how styled-components works and I created a small button that changes color and icon based on the prop that is given when used.
+```js
+import React from 'react'
+import styled from 'styled-components'
+
+import { RiCheckLine, RiCloseLine } from 'react-icons/ri'
+
+const Button = styled.div`
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
+  background: ${props => props.color || 'rgb(8, 99, 8)'};
+  
+`
+
+function RoundedButtons({ type = 'green' }) {
+  return (
+    <Button color={type}>
+      {type === 'green' ? <RiCheckLine /> : <RiCloseLine />}
+    </Button>
+  )
+}
+
+export default RoundedButtons
+```
+![img](assets/readme/green-button.png)
+![img](assets/readme/red-button.png)<br>
+
+[Back To The Top](#deverr-)
+
+---
+### Bugs, Blockers & Wins
+
+#### Bugs
+- [ ] Fix problems with responsiveness
+- [ ] Fix UI in the Job page
+- [ ] Fix UI in People Page
+- [ ] Improve the UI 
+ 
+#### Challenges & Wins
+This is been the first project I built in a team, using Git and Github. <br>
+Quickly I got used to creating branches and work in safe environments and I loved it. <br>
+
+We created always the opportunity to learn and ask for help from each other and that allowed us not only to produce a website packed with features, but to be all of us, the owners of each line of code.<br>
+
+As well this is been the first time working on top of a code wrote by someone else. Coming from the same course and mentor is been simple to do so but sometimes I needed some clarification and Sandra and Tim were always available.
+
+One of our biggest challenges is been producing a website that had more than one type of user. We didn't think about it while planning, but having the two users slowed us down a bit.<br>
+Another little challenge that I had, is to always be mainly focused on be styling and after a few days, monotony started to chick in.<br>
+
+Overall I really enjoyed working on this project and working in well organized team.
+
+[Back To The Top](#deverr-)
+
+---
+### Future Features & Key Learning
+
+#### Future Features
+- [ ] Improve Notification feature
+- [ ] Improve Messaging feature
+#### Key Learning
+This project told me a lot, especially about teamwork while coding:
+- Having a clean, understandable code makes everything more fun and easy to maintain. 
+- It's imperative, especially in a team, to have the final goal clear and described in detail from the beginning to make sure that every person on the team aims towards the same target.
+- Daily stand-ups and de-briefing are very powerful.
+
+UI-wise, I found it difficult to build this project without a mock-up made with Figma or Adobe XD. <br>
+For the next projects, I would prefer to plan the UI before starting to code it.
+
+[Back To The Top](#deverr-)
+
 ---
 ## Contributors
 * Alberto Cerrone [📧](mailto:cerrone.alberto93@gmail.com)
 * Sandra Spighel [📧](mailto:s.spighel@gmail.com)
 * Tim Frame [📧](mailto:t.f.retouching@gmail.com)
----
 
-<h2>The App: Deverr</h2>
-<h3>App Overview</h3>
-<p>Deverr allows Developers to connect with companies or people advertsing jobs. On Deverr the people and companies advertsing jobs are referred to as Auctioners and the developers are referred to as Bidders.
-Inspired by the Fiverr website, the platform is based on a Bidding system where Auctioneers post Jobs and interested Developers can 'bid' to win the contract.</p>
+### Contributing to this project
+If you have suggestions for improving this project, please [open an issue on GitHub](https://github.com/albertocerrone/Deverr/issues/new).
 
----
-<h2>How to use App</h2>
-
-<ol>
-<li>When a user first lands on the site they are taken to the home page. At this point that can choose from one of four options. If don't have an account they can click the register button to create an account. If they have an account they can click the login button. Alternatively they can click the jobs button and they taken to a page where they can view all jobs currently on the site. Lastly they can click the people button and will be taken to a page where they can see all the current users of the site.</li>
-
-# ![](readme-images/home-page.png)  
-
-
-<li>If a user has chosen to create an account they are taken to the register page. Firstly they need to select if they are a, ‘Bidder’ or an ‘Auctioneer. If a user chooses the ‘Bidder’, option they are required to provide name, email, password, password confirmation, bio, city, skills(can choose multiple), select there availability and choose a profile image. If a user chooses the ‘Auctioneer’ option they are required to provide a name, username, password, password confirmation, bio, city, confirm they are an auctioneer and a profile photo. If a user incorrectly fills in any form field and tries to submit the form they are will receive an error message underneath the form field that is incorrect.</li>
-
-# ![](readme-images/register-page-1.png)  
-# ![](readme-images/register-page-2.png)  
-# ![](readme-images/register-page-3.png)  
-
-<li>If the user registration is successful they are pushed onto the login page were the user needs to provide the email and password they provided during the registration process. If either field is incorrect on submission the user will receive an error message.</li>
-
-
-# ![](readme-images/login-page.png)  
-
-<li>Once logged in a user is taken to there profile page. On a users profile page they can see all the details they have provided during registration. A user also has the option to edit or delete their profile using the buttons at the bottom of the page. If a user is an auctioner they have an addtional button that gives them the option to create a new job.</li>
-
-<p>Bidder Profile:</p>
-
-# ![](readme-images/bidder-profile.png) 
-
-<p>Auctioneer Profile</p>
-
-# ![](readme-images/auctioneer-profile.png) 
-
-<li>If an ‘Auctioneer’ chooses to create a job they are moved to the create new job page. Here the user needs to provide a job title, job description, job deadline, job category, the maximum fee payable for the job(bidders need to bid under this amount) and an image.</li>
-
-# ![](readme-images/new-job.png) 
-
-<li>Once the job has been submitted the user is taken to the live view of the job. This is the view that all other users of the website will have if they clicked on a job thumbnail. Apart from the edit and delete button. This is only visible to the user who created the job.</li
-
-# ![](readme-images/live-job.png) 
-
-<li>If a 'Bidder' clicks the jobs button located in the navigation bar they are taken to the jobs index. Here a bidder can view all jobs currently on the site or filter jobs by catergoty using the carousel at the top of the page.  <li>
-
-# ![](readme-images/jobs.png) 
-
-<li>A ‘Bidder’ can click a job thumbnail and is taken to the live job view. Here a ‘Bidder’ can comment on a job and ask an ‘Auctioneer’ a question about a job by using the add comment form. The ‘Bidder can also place a bid on a job by using the 'Place Bid', field where the ‘Bidder’ needs to provide a short message and underneath that how much they would like to bid. Once a ‘Bidder’ has placed a bid they will get an alert to say their bid has been placed. The bid itself is only visible to the ‘Auctioneer’ who created the job.</li>
-
-# ![](readme-images/bidder-job-view.png) 
-
-<li>Once an ‘Auctioneer’ has received bids on a job they can select the winning bid by going to the live job view of the job they have posted. At the bottom of the job an ‘Auctioneer’ can see any bids they have received and needs to click the, ‘Accept This Bid’ button to choose the winning bid. Once the bid has been accepted, the ‘Accept This Bid’ button is removed from all remaining bids and a message is sent to the ‘Bidders’ profile with the winning bid.</li>
-
-# ![](readme-images/accept-bid.png) 
-
-<li>A ‘Bidder’ is then able to see the message when they log into their profile. From here the bidder can reply to the message and exchange details with the ‘Auctioneer’</li>
-
-# ![](readme-images/bidder-message.png) 
-</ol>
-
-<h2>Creating The App</h2>
-
-<p>Once we had a clear idea for the project and how the app could potentially work we moved on to the planning phase. We began by creating wire frames to get a feel for the flow of the site and created a Trello board to track how we were building the site and who was responsible for what. It was at this point that each team member took ownership of an specfic area: Alberto was responsible for styling, I was responsible for the front-end and Sandra was responsible for the back-end.</p>
-
-# ![](readme-images/home-mockup.jpg) 
-# ![](readme-images/register-mock-up.jpg) 
-# ![](readme-images/login-mock-up.jpg) 
-# ![](readme-images/profile-mock-up.jpg) 
-
-<p>In the planning phase we had worked out that we would need to create 40 ‘Auctioneer Profiles’ and 60 ‘Bidder’ profiles. Alberto had found a React dependency called ‘Faker.js’ that could create dummy users. Alberto took charge of creating the dummy users and incorporating ‘Faker.js’ into the data seeding process.</p>
-
-
-
-<p>We decided on having 6 types of job categories Android Developer, Apple Developer, Back-end Developer, Front-end Developer, Game Developer and UI Developer. For each category we would create 10 jobs. 60 jobs in total. Sandra started working on creating the job seeds and I moved on to creating the shell for the back-end of the site.</p>
-
-<p>The code snippet below is an example of a job seed.</p>
-
-# ![](readme-images/job-seed.png)
-
-<p>I started off by creating a new package.json file, touching a new ‘index.js’ file and installing the dependencies I would need to get the project started that included nodemon, express and mongoose. I then added a script to the ‘package.json’ to start nodemon for hot reloading. Then I moved on to creating the ‘startServer’ function in ‘index.js.  The ‘startServer’ function tested if the server was running on port 4000 and was connecting to the database. At this point I passed on creating the back-end to Sandra and began working on the remaining job seeds.</p>
-
-# ![](readme-images/start-server.png)
-
-<p>Sandra started creating the models for the user and the jobs. Then moved onto to the controllers and router. Testing each each controller as it was created using Insomnia to make API requests. Once it was established the API requests were working correctly Sandra implemented a secure route that would check if a user was logged into the website before giving them access to creating a job. With the secure route in place, a custom error handler was implemented to handle different types of errors the back-end might encounter while a user was a making a request.</p>
-
-<p>The code snippet below is the user model.</p>
-
-# ![](readme-images/start-server.png)
-
-<p>The image below are routes Sandra made in Insomnia to test routes.</p>
-
-# ![](readme-images/insomnia.png)
-
-<p>While Sandra was working on the back-end Alberto started to work on the, 'seedDatabase' function that would be used to add all the dummy data to the site and drop all the current data and refresh it with new data.</p>
-
-<p>The code snippet below is 'seedDatabase' function.</p>
-
-# ![](readme-images/seed-database.png)
-
-<p>With Sandra working on the backend. I moved onto starting the front end and Alberto began styling the site.</p>
-
-<p>I started off by creating a basic navigation, home, register and login component that only returned the name of each page. From there I imported those components into 'App.js' and imported 'react-router-dom' and began creating the routing for the website. Then moved onto the 'Nav' component and set-up the navigation bar. With the 'Nav' component working correctly I moved onto filling the 'Home' component with placeholder data that Alberto would change as he worked his way through styling the site. </p>
-
-<p>My next task was to create the register page to capture a users information and send a post request to the database. I created a new folder called lib and in the lib folder a file called 'api.js' that would store all the API requests made to the server and could be imported to other files as needed. We used 'Axios' to make all of our requests. Next I made another new file called, 'utils' and inside utils made a custom hook that would handle capturing users input and setting it into state. It also dealt with catching an error if a user had incorrecly filled in a form field.</p>
-
-<p>The code snippet below is the custom hook used in login and register page.</p>
-
-# ![](readme-images/custom-hook.png)
-
-<p>From here I moved to the, ‘Login’ component. To log a user in I  created a new file inside the ‘lib’ folder called ‘auth.js’, ‘auth.js’ held all the functions that were used to authenticate a user. Inside ‘auth.js’ I added a ‘setToken’ and ‘getToken function’, the ‘setToken’ function stored a users authentication token into local storage. I then added a logout function to the ‘Nav’ component. Creating a new function in ‘auth.js’ that removes a users token from local storage. Then a user is pushed back to the home page. From here I added functionality that would hide the login and register button and show the log out button if a user is logged in and vice versa if a user was logged out.<p>
-
-<p>The code snippet below are the functions from the, 'auth.js' file to get, set and remove a users token.</p>
-
-# ![](readme-images/tokens.png)
-
-<p>Moving on to creating the ‘UserShow’ component that would show the profile of the user who is currently logged in. This was only visible to that user. Creating a new GET request that used a users token to validate they were the current user. At this point Sandra had completed the back end and moved onto helping in the front-end working on the home page and creating the ‘UserIndex’ component that showed all the current users of the site. Alberto continued to work on the styling, he would a style page after I had added all the content to it.</p>
-
-<p>Next was the, ‘JobIndex’ component that made a get request to the server to get all the jobs currently on the site. The data received back from the database was mapped over and each job was passed into its own component. Once all the data was displaying correctly I moved onto creating the ‘JobShow’ component that would show a detailed break down of a job when it was clicked by a user. This involved capturing the id of a job when it was clicked and passing the id in a post request to database and retrieving the information of that job.</p>
-
-<p>The code snippet below is from the 'JobNew' component and shows the function that captures the job information from a user and the post request that is sent to database.</p>
-
-# ![](readme-images/create-job.png)
-
-<p>At this point the main pages of the site had been created. From here I went back through and added editing functionality to user profiles and jobs. They both used a get request to get the information of that user or job from the database that was in turn used to pre-populate a form for a user to edit. Taking the changes made by a user and making a PUT request to save the changes.</p>
-
-
-<p>The code snippet below is from the 'JobEdit' component and shows the GET request to pre-populate a from, the function to capture the changes to a job and the PUT request to update the changes.</p>
-
-# ![](readme-images/edit-job.png)
-
-
-<p>Lastly adding additional functionality to the ‘JobShow’ component this involved adding the functionality to allow a bidder to comment on a job using a put request. Then the bidding functionality that allowed a, 'Bidder' to place a bid via another put request on a job. After that is was the accepting a bid functionality that sent a PUT request to a job and changed the status of a job to false. It also sent a POST request to a, 'Bidder' that alerted the 'Bidder' that there bid had been accepted. </p>
-
-
-
-<h2>Challenges</h2>
-
-<p>This was the first group project I did while at General Assembly. This brought about new challenges that I had not encountered before. The most prevalent being all working on one Github repository at the same time and avoiding merge conflicts, but we soon overcame this by using a Trello Board to track what each team member was working on and also having clear communication in the team throughout the whole project. </p>
-
-<p>The biggest challenge we ran into was the model for the user profile. Initially we had decided to have two different models, a model for the ‘Bidder’ and a model for the ‘Auctioneer’. We thought this approach would give more clarity and separation between the two types of users and the ‘Bidder’ model required additional information. Once we began building we found this wan’t the most practical approach as we would  need to repeat the same code twice for each user in multiple areas of this site. To solve the problem we decided to use one user model and make the additional fields required for the ‘Bidder’ profile not automatically required on the back-end. Then on the font end we would use conditional statements to hide and reveal what each user could see dependent on there profile type.</p>
-
-
-<h2>Wins</h2>
-
-<p>I think the biggest win as a team was firstly how well we worked together throughout the project. We were able to communicate clearly  resulting in each team member having a voice in the decision making process. Secondly we could help each other out when we ran into blockers and have group coding sessions to get past it.</p>
-
-<p>Personally the biggest win for me was was working out how I could notify a ‘Bidder’ that they had the winning bid after it was chosen by the ‘Auctioneer’. As I was working on the ‘handleAcceptingBid’ function I realised that I had access to the id of the person who had created the bid. With the id I would be able to add an additional field to the user model called ‘Message’.</p>
-
-# ![](readme-images/submit-bid.png) 
-
-# ![](readme-images/user-model.png) 
-
-<p>Then add a new controller to ‘user.js’  controller file. That would push a new message onto the ‘message’ array of the ‘Bidder’ with the winning bid.</p>
-
-# ![](readme-images/message-controller.png) 
-
-
-<p>From there I displayed the message on the profile of the winning ‘Bidder’. Where they would be guaranteed to see the message because a user would always land on there user profile first after logging in.</p>
-
-# ![](readme-images/display-message.png) 
-
-
-<h2>Learnings</h2>
-<ul>
-<li>The importance of clearly thinking database models through. Not just the information they will contain but how that information will effect other areas of the site.</li>
-<li>Clear communication when working as a team is essential.</li>
-</ul>
-
-<h2>Future Features</h2>
-<p>If I had more time I would like to:</p>
-<ul>
-<li>Change the messaging function so that it is viewable from any page on the website and make it more seamless.</li>
-<li>Make the site more mobile responsive.</li>
-<li>Add notification animations.</li>
- </ul>
-
-
+[Back To The Top](#deverr-)
 
 ---
 ## License & copyright
-This project was build for educational purposes. All the information on the website, including profiles and job adds, is fictitional. 
 
-©️ [Alberto Cerrone](www.linkedin.com/in/alberto-cerrone)
-©️ [Sandra Spighel](https://www.linkedin.com/in/sandraspighel)
-©️ [Tim Frame](https://www.linkedin.com/in/tim-frame-187241100/)
+This work is dedicated to the [public domain (CC0 1.0)](http://creativecommons.org/publicdomain/zero/1.0/). To the extent possible under law, Alberto Cerrone has waived all copyright and related or neighbouring rights to Deverr. See the LICENSE file for all the legalese.
+
+
+
+[Back To The Top](#deverr-)
+
+---
+## Author Info
+- Twitter - [@AlbertoCerrone](https://twitter.com/AlbertoCerrone)
+- LinkedIn - [Alberto Cerrone](http://www.linkedin.com/in/alberto-cerrone/)
+- Website - [Portfolio](http://albertocerrone.co.uk)
+
+[Back To The Top](#deverr-)
 

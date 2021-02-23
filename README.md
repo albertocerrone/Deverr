@@ -5,17 +5,17 @@ by [Alberto Cerrone](www.linkedin.com/in/alberto-cerrone), [Sandra Spighel](http
 ![img](https://img.shields.io/badge/-WORK%20IN%20PROGRESS...-important)<br>
 Timeline: 10 days
 
-👉 [<b>Try me</b>](https://deverr.herokuapp.com/) 👈
+👉 [<b>Try Me</b>](https://deverr.herokuapp.com/) 👈
 
 ---
 
 ## Overview
 ![img](assets/readme/logo.png)<br>
 
-Deverr allows Developers to connect with companies or people advertsing jobs.
+Deverr allows developers to connect with companies or people advertsing jobs.
 Inspired by the Fiverr website, the platform is based on a bidding system where Auctioneers post Jobs and interested developers(Bidders) can ‘bid’ to win the contract.
 
-This project is been developed during General Assembly course, with the goal of design a full-stack MERN app using over 10 day time. I'm actively working on this project.
+This project has been developed during General Assembly course, with the goal of design a full-stack MERN app using over 10 day time. I'm actively working on this project.
 
 ---
 
@@ -52,7 +52,7 @@ This JSON has to be imported to [Insomnia](https://insomnia.rest/)👇<br>
 
 
 ### Installation Steps
-Clone or download the repo then do the following in Terminal:
+Clone or download the repository then do the following in Terminal:
 
 - If your mongoDB is offline, turn it on:  `mongod --dbpath ~/data/db`
 - Install back-end dependencies:  `yarn`
@@ -63,7 +63,7 @@ Clone or download the repo then do the following in Terminal:
 OR:
   - Start back-end server: `yarn dev`
   - Start front-end server: `cd client && yarn start`
-- if you need to seed your database: `yarn seed`
+- If you need to seed your database: `yarn seed`
 ### How to Use It
 
 
@@ -121,7 +121,7 @@ Once the bid has been accepted, all the "Accept This Bids" button is removed fro
 ### Technologies Used
 
 #### Languages Used
-- [Javascript](https://www.javascript.com/)
+- [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/)
 #### Frameworks
 - [React with React Hooks](https://reactjs.org/)
@@ -352,14 +352,14 @@ export default RoundedButtons
 - [ ] Improve the UI 
  
 #### Challenges & Wins
-This is been the first project I built in a team, using Git and Github. <br>
+This has been the first project I built in a team, using Git and Github. <br>
 Quickly I got used to creating branches and work in safe environments and I loved it. <br>
 
 We created always the opportunity to learn and ask for help from each other and that allowed us not only to produce a website packed with features, but to be all of us, the owners of each line of code.<br>
 
-As well this is been the first time working on top of a code wrote by someone else. Coming from the same course and mentor is been simple to do so but sometimes I needed some clarification and Sandra and Tim were always available.
+As well this has been the first time working on top of a code wrote by someone else. Coming from the same course and mentor has been simple to do so but sometimes I needed some clarification and Sandra and Tim were always available.
 
-One of our biggest challenges is been producing a website that had more than one type of user. We didn't think about it while planning, but having the two users slowed us down a bit.<br>
+One of our biggest challenges has been producing a website that had more than one type of user. We didn't think about it while planning, but having the two users slowed us down a bit.<br>
 Another little challenge that I had, is to always be mainly focused on be styling and after a few days, monotony started to chick in.<br>
 
 Overall I really enjoyed working on this project and working in well organized team.

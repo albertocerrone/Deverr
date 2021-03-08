@@ -350,7 +350,7 @@ export default RoundedButtons
 - [ ] Fix UI in the Job page
 - [ ] Fix UI in People Page
 - [ ] Improve the UI 
- 
+- [ ] Improve image rendering  
 #### Challenges & Wins
 This is been the first project I built in a team, using Git and Github. <br>
 Quickly I got used to creating branches and work in safe environments and I loved it. <br>
@@ -372,6 +372,7 @@ Overall I really enjoyed working on this project and working in well organized t
 #### Future Features
 - [ ] Improve Notification feature
 - [ ] Improve Messaging feature
+
 #### Key Learning
 This project told me a lot, especially about teamwork while coding:
 - Having a clean, understandable code makes everything more fun and easy to maintain. 

@@ -10,6 +10,7 @@
 	text-align: center;
   margin: 10px;
   background: $gm-background-3 !important; 
+  content-visibility: auto;
 }
 
 .user-card-index{
@@ -26,5 +27,6 @@
   
   img{
     max-width: 400px;
+    
   }
 }

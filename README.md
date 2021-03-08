@@ -31,6 +31,7 @@ This project has been developed during General Assembly course, with the goal of
   - [Bugs, Blockers & Wins](#bugs,-blockers-&-wins)
     - [Bugs](#bugs)
     - [Challenges & Wins](#challenges-&-wins)
+    - [Updates](#updates)
   - [Future Features & Key Learning](#future-features-&-key-learning)
     - [Future Features](#future-features)
     - [Key Learning](#key-learning)
@@ -365,7 +366,7 @@ Another little challenge that I had, is to always be mainly focused on be stylin
 Overall I really enjoyed working on this project and working in well organized team.
 
 #### Updates
-
+##### 08/03/2021
 I've improved the overall performance of the Job Index page reducing from 7147ms to 3538ms using containment and content-visibility <br>
 ![before](assets/readme/rendering1.png)
 ![after](assets/readme/rendering2.png)

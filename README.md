@@ -366,7 +366,7 @@ Overall I really enjoyed working on this project and working in well organized t
 
 #### Updates
 
-I've improved the overall performance of the Job Index page reducing from 7147ms to 3538ms using containment and content-visibility
+I've improved the overall performance of the Job Index page reducing from 7147ms to 3538ms using containment and content-visibility <br>
 ![before](assets/readme/rendering1.png)
 ![after](assets/readme/rendering2.png)
 

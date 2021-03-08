@@ -350,7 +350,7 @@ export default RoundedButtons
 - [ ] Fix UI in the Job page
 - [ ] Fix UI in People Page
 - [ ] Improve the UI 
-- [ ] Improve image rendering  
+- [x] Improve image rendering  
 #### Challenges & Wins
 This has been the first project I built in a team, using Git and Github. <br>
 Quickly I got used to creating branches and work in safe environments and I loved it. <br>
@@ -363,6 +363,12 @@ One of our biggest challenges has been producing a website that had more than on
 Another little challenge that I had, is to always be mainly focused on be styling and after a few days, monotony started to chick in.<br>
 
 Overall I really enjoyed working on this project and working in well organized team.
+
+#### Updates
+
+I've improved the overall performance of the Job Index page reducing from 7147ms to 3538ms using containment and content-visibility
+![before](assets/readme/rendering1.png)
+![after](assets/readme/rendering2.png)
 
 [Back To The Top](#deverr-)
 
